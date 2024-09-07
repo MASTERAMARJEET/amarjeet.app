@@ -8,6 +8,10 @@ declare module "sst" {
       "type": "sst.aws.Function"
       "url": string
     }
+    "Site": {
+      "type": "sst.aws.Astro"
+      "url": string
+    }
   }
 }
 export {}

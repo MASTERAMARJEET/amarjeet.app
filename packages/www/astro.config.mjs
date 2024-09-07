@@ -5,4 +5,5 @@ import aws from 'astro-sst'
 export default defineConfig({
   output: 'static',
   adapter: aws(),
+  server: { open: true },
 })
