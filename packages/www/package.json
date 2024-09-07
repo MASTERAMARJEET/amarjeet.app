@@ -1,0 +1,24 @@
+{
+  "name": "@amarjeet-app/www",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.html",
+  "keywords": [],
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "astro": "^4.15.4",
+    "astro-sst": "^2.43.5"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1"
+  }
+}
