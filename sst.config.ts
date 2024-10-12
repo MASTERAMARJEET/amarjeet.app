@@ -5,19 +5,16 @@ export default $config({
     return {
       name: "amarjeet-app",
       removal: input?.stage === "production" ? "retain" : "remove",
-      home: "aws",
+      home: "cloudflare",
       providers: {
         cloudflare: true,
+        aws: true,
       },
     };
   },
   async run() {
-    const api = await import("./infra/api");
-    const www = await import("./infra/www");
+    // const www = await import("./infra/www");
 
-    return {
-      api: api.myApi.url,
-      www: www.outputs.www,
-    };
+    return {};
   },
 });

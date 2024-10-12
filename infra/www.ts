@@ -1,10 +1,7 @@
 import { domain } from "./dns";
 
-export const www = new sst.aws.Astro("Site", {
-  domain: {
-    name: "www." + domain,
-    dns: sst.cloudflare.dns(),
-  },
+export const www = new sst.cloudflare.StaticSite("Site", {
+  domain: "www." + domain,
   path: "./packages/www",
 });
 

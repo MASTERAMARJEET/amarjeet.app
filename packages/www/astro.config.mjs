@@ -1,9 +1,10 @@
 import { defineConfig } from 'astro/config'
-import aws from 'astro-sst'
+
+import cloudflare from '@astrojs/cloudflare'
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'static',
-  adapter: aws(),
+  output: 'hybrid',
+  adapter: cloudflare(),
   server: { open: true },
 })

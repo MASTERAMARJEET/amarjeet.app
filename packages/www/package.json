@@ -14,10 +14,10 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "astro": "^4.15.4",
-    "astro-sst": "^2.43.5"
+    "astro": "^4.15.4"
   },
   "devDependencies": {
+    "@astrojs/cloudflare": "^11.1.0",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1"
   }
