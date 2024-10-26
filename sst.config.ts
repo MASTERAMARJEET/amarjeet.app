@@ -13,8 +13,6 @@ export default $config({
     };
   },
   async run() {
-    // const www = await import("./infra/www");
-
     return {};
   },
 });
