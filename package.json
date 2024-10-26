@@ -9,9 +9,9 @@
     "preview": "astro build && wrangler dev",
     "astro": "astro",
     "deploy": "astro build && wrangler deploy",
-    "cf-typegen": "wrangler types",
+    "typegen": "wrangler types && astro sync",
     "format": "prettier ./**/*.{js,mjs,ts,tsx,astro,mdx,json} -w",
-    "prepare": "husky"
+    "prepare": "husky && bun run typegen"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -20,6 +20,7 @@
     "@astrojs/rss": "^4.0.9",
     "@astrojs/sitemap": "^3.2.1",
     "astro": "^4.16.7",
+    "astro-breadcrumbs": "^3.2.0",
     "typescript": "^5.6.3"
   },
   "devDependencies": {
