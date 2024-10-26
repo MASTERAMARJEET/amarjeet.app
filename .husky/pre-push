@@ -1,1 +1,1 @@
-bun run tsc -p
+bun run tsc -p tsconfig.json --noEmit
