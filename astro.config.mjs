@@ -17,4 +17,5 @@ export default defineConfig({
       enabled: true,
     },
   }),
+  server: { open: true },
 });

@@ -2,6 +2,7 @@
   "name": "amarjeet-app",
   "type": "module",
   "version": "0.0.1",
+  "packageManger": "bun@1.1.33",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
