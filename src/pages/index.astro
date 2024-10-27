@@ -1,25 +1,14 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import PageLayout from '../layouts/PageLayout.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <h1>Hello!</h1>
-      <p>
-        Welcome to Amarjeet's blog site. It is currently under construction 🚧.
-        Please visit again later
-      </p>
-      <div style="height: 50vh;"></div>
-    </main>
-    <Footer />
-  </body>
-</html>
+<PageLayout>
+  <section class="w-full py-8">
+    <h1 class="text-5xl">Hello!</h1>
+    <p class="py-3 text-2xl">
+      Welcome to Amarjeet's blog site. It is currently under construction 🚧.
+      Please visit again later
+    </p>
+  </section>
+  <div class="h-[60vh]"></div>
+</PageLayout>
