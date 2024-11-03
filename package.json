@@ -1,56 +1,27 @@
 {
   "name": "amarjeet-app",
-  "type": "module",
-  "version": "0.0.1",
-  "packageManger": "bun@1.1.33",
-  "scripts": {
-    "dev:ui": "astro dev",
-    "dev:api": "bun run --cwd src/api wrangler dev",
-    "dev": "sst dev",
-    "build": "astro check && astro build",
-    "preview": "astro build && wrangler dev",
-    "astro": "astro",
-    "deploy:ui": "astro build && wrangler deploy",
-    "deploy:api": "bun run --cwd src/api wrangler deploy --minify",
-    "deploy": "bun run deploy:api && bun run deploy:ui",
-    "deploy-dev": "bun run deploy:api -e dev && bun run deploy:ui -e dev",
-    "typegen": "wrangler types && astro sync",
-    "format": "prettier ./**/*.{js,mjs,ts,tsx,astro,mdx,json} -w",
-    "prepare": "bun run typegen && husky"
+  "engines": {
+    "node": ">=20"
   },
-  "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/cloudflare": "^11.1.0",
-    "@astrojs/mdx": "^3.1.8",
-    "@astrojs/rss": "^4.0.9",
-    "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/tailwind": "^5.1.2",
-    "@hono/swagger-ui": "^0.4.1",
-    "@hono/zod-openapi": "^0.16.4",
-    "astro": "^4.16.7",
-    "astro-breadcrumbs": "^3.2.0",
-    "hono": "^4.6.7",
-    "sst": "3.2.61",
-    "tailwindcss": "^3.4.14",
-    "typescript": "^5.6.3"
+  "packageManager": "bun@1.1.33",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "sst dev",
+    "build": "turbo build",
+    "typegen": "turbo typegen",
+    "check-types": "turbo check-types",
+    "format": "turbo format"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241022.0",
-    "@tailwindcss/typography": "^0.5.15",
-    "daisyui": "^4.12.13",
-    "husky": "^9.1.6",
-    "lint-staged": "^15.2.10",
-    "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.8",
-    "wrangler": "^3.84.0"
+    "@tsconfig/node20": "^20.1.4",
+    "turbo": "^2.2.3",
+    "typescript": "^5.6.3"
   },
-  "lint-staged": {
-    "*.{js,mjs,ts,tsx,astro,mdx,json}": [
-      "prettier -w"
-    ],
-    "*.astro": [
-      "astro check"
-    ]
+  "dependencies": {
+    "sst": "^3.2.73"
   }
 }
