@@ -4,6 +4,7 @@
 /* deno-fmt-ignore-file */
 import "sst"
 export {}
+import "sst"
 declare module "sst" {
   export interface Resource {
   }
