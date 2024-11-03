@@ -13,19 +13,7 @@ export default $config({
     };
   },
   async run() {
-    new sst.x.DevCommand("Web", {
-      dev: {
-        autostart: true,
-        command: "bun run dev",
-        directory: "./apps/web",
-      },
-    });
-    new sst.x.DevCommand("API", {
-      dev: {
-        autostart: true,
-        command: "bun run dev",
-        directory: "./apps/api",
-      },
-    });
+    await import("./infra/commands");
+    return;
   },
 });

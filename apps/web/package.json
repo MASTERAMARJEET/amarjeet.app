@@ -10,7 +10,7 @@
     "deploy": "astro build && wrangler deploy",
     "typegen": "wrangler types && astro sync",
     "check-types": "astro check",
-    "format": "prettier ./**/*.{js,mjs,ts,astro,mdx,json} -w"
+    "format": "eslint . --fix"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -27,9 +27,6 @@
     "@cloudflare/workers-types": "^4.20241022.0",
     "@tailwindcss/typography": "^0.5.15",
     "daisyui": "^4.12.13",
-    "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.8",
     "wrangler": "^3.84.0"
   }
 }
