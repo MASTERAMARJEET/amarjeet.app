@@ -30,11 +30,11 @@ Light color scheme has to be defined using the css selector `:root` and `html[da
 ```css
 :root,
 html[data-theme="light"] {
-  --color-fill: 246, 238, 225;
-  --color-text-base: 1, 44, 86;
+  --color-bg: 246, 238, 225;
+  --color-fg: 1, 44, 86;
   --color-accent: 225, 74, 57;
-  --color-card: 217, 209, 195;
-  --color-card-muted: 239, 216, 176;
+  --color-surface: 217, 209, 195;
+  --color-muted: 239, 216, 176;
   --color-border: 220, 152, 145;
 }
 ```
@@ -46,11 +46,11 @@ html[data-theme="light"] {
 ```css
 :root,
 html[data-theme="light"] {
-  --color-fill: 242, 245, 236;
-  --color-text-base: 53, 53, 56;
+  --color-bg: 242, 245, 236;
+  --color-fg: 53, 53, 56;
   --color-accent: 17, 88, 209;
-  --color-card: 206, 213, 180;
-  --color-card-muted: 187, 199, 137;
+  --color-surface: 206, 213, 180;
+  --color-muted: 187, 199, 137;
   --color-border: 124, 173, 255;
 }
 ```
@@ -62,11 +62,11 @@ html[data-theme="light"] {
 ```css
 :root,
 html[data-theme="light"] {
-  --color-fill: 250, 252, 252;
-  --color-text-base: 34, 46, 54;
+  --color-bg: 250, 252, 252;
+  --color-fg: 34, 46, 54;
   --color-accent: 211, 0, 106;
-  --color-card: 234, 206, 219;
-  --color-card-muted: 241, 186, 212;
+  --color-surface: 234, 206, 219;
+  --color-muted: 241, 186, 212;
   --color-border: 227, 169, 198;
 }
 ```
@@ -81,11 +81,11 @@ Dark color scheme has to be defined as `html[data-theme="dark"]`.
 
 ```css
 html[data-theme="dark"] {
-  --color-fill: 47, 55, 65;
-  --color-text-base: 230, 230, 230;
+  --color-bg: 47, 55, 65;
+  --color-fg: 230, 230, 230;
   --color-accent: 26, 217, 217;
-  --color-card: 63, 75, 90;
-  --color-card-muted: 89, 107, 129;
+  --color-surface: 63, 75, 90;
+  --color-muted: 89, 107, 129;
   --color-border: 59, 70, 85;
 }
 ```
@@ -96,11 +96,11 @@ html[data-theme="dark"] {
 
 ```css
 html[data-theme="dark"] {
-  --color-fill: 33, 35, 61;
-  --color-text-base: 244, 247, 245;
+  --color-bg: 33, 35, 61;
+  --color-fg: 244, 247, 245;
   --color-accent: 255, 82, 86;
-  --color-card: 57, 60, 102;
-  --color-card-muted: 74, 78, 134;
+  --color-surface: 57, 60, 102;
+  --color-muted: 74, 78, 134;
   --color-border: 177, 47, 50;
 }
 ```
@@ -111,11 +111,11 @@ html[data-theme="dark"] {
 
 ```css
 html[data-theme="dark"] {
-  --color-fill: 53, 54, 64;
-  --color-text-base: 233, 237, 241;
+  --color-bg: 53, 54, 64;
+  --color-fg: 233, 237, 241;
   --color-accent: 255, 120, 200;
-  --color-card: 75, 76, 89;
-  --color-card-muted: 113, 85, 102;
+  --color-surface: 75, 76, 89;
+  --color-muted: 113, 85, 102;
   --color-border: 134, 67, 107;
 }
 ```
@@ -126,12 +126,12 @@ html[data-theme="dark"] {
 
 ```css
 html[data-theme="dark"] {
-  --color-fill: 16, 23, 42; /* higher contrast bgColor */
-  --color-fill: 33, 39, 55;
-  --color-text-base: 234, 237, 243;
+  --color-bg: 16, 23, 42; /* higher contrast bgColor */
+  --color-bg: 33, 39, 55;
+  --color-fg: 234, 237, 243;
   --color-accent: 255, 107, 1;
-  --color-card: 27, 39, 70;
-  --color-card-muted: 138, 51, 2;
+  --color-surface: 27, 39, 70;
+  --color-muted: 138, 51, 2;
   --color-border: 171, 75, 8;
 }
 ```
@@ -142,11 +142,11 @@ html[data-theme="dark"] {
 
 ```css
 html[data-theme="dark"] {
-  --color-fill: 33, 39, 55; /* lower contrast bgColor */
-  --color-text-base: 234, 237, 243;
+  --color-bg: 33, 39, 55; /* lower contrast bgColor */
+  --color-fg: 234, 237, 243;
   --color-accent: 255, 107, 1;
-  --color-card: 52, 63, 96;
-  --color-card-muted: 138, 51, 2;
+  --color-surface: 52, 63, 96;
+  --color-muted: 138, 51, 2;
   --color-border: 171, 75, 8;
 }
 ```
@@ -157,11 +157,11 @@ html[data-theme="dark"] {
 
 ```css
 html[data-theme="dark"] {
-  --color-fill: 33, 39, 55;
-  --color-text-base: 234, 237, 243;
+  --color-bg: 33, 39, 55;
+  --color-fg: 234, 237, 243;
   --color-accent: 235, 63, 211;
-  --color-card: 52, 63, 96;
-  --color-card-muted: 125, 79, 124;
+  --color-surface: 52, 63, 96;
+  --color-muted: 125, 79, 124;
   --color-border: 100, 36, 81;
 }
 ```
@@ -172,11 +172,11 @@ html[data-theme="dark"] {
 
 ```css
 html[data-theme="dark"] {
-  --color-fill: 0, 1, 35;
+  --color-bg: 0, 1, 35;
   --color-accent: 97, 123, 255;
-  --color-text-base: 234, 237, 243;
-  --color-card: 33, 34, 83;
-  --color-card-muted: 12, 14, 79;
+  --color-fg: 234, 237, 243;
+  --color-surface: 33, 34, 83;
+  --color-muted: 12, 14, 79;
   --color-border: 48, 63, 138;
 }
 ```

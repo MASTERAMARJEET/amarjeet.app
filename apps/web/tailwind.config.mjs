@@ -3,9 +3,9 @@ import typography from "@tailwindcss/typography";
 const withOpacity = (variableName) => {
   return ({ opacityValue }) => {
     if (opacityValue !== undefined) {
-      return `rgba(var(${variableName}), ${opacityValue})`;
+      return `hsl(var(${variableName}) / ${opacityValue})`;
     }
-    return `rgb(var(${variableName}))`;
+    return `hsl(var(${variableName}))`;
   };
 };
 
@@ -23,18 +23,18 @@ export default {
     extend: {
       textColor: {
         skin: {
-          base: withOpacity("--color-text-base"),
+          base: withOpacity("--color-fg"),
           accent: withOpacity("--color-accent"),
-          inverted: withOpacity("--color-fill"),
+          inverted: withOpacity("--color-bg"),
         },
       },
       backgroundColor: {
         skin: {
-          fill: withOpacity("--color-fill"),
+          fill: withOpacity("--color-bg"),
           accent: withOpacity("--color-accent"),
-          inverted: withOpacity("--color-text-base"),
-          card: withOpacity("--color-card"),
-          "card-muted": withOpacity("--color-card-muted"),
+          inverted: withOpacity("--color-fg"),
+          surface: withOpacity("--color-surface"),
+          muted: withOpacity("--color-muted"),
         },
       },
       outlineColor: {
@@ -45,13 +45,13 @@ export default {
       borderColor: {
         skin: {
           line: withOpacity("--color-border"),
-          fill: withOpacity("--color-text-base"),
+          fill: withOpacity("--color-fg"),
           accent: withOpacity("--color-accent"),
         },
       },
       fill: {
         skin: {
-          base: withOpacity("--color-text-base"),
+          base: withOpacity("--color-fg"),
           accent: withOpacity("--color-accent"),
         },
         transparent: "transparent",

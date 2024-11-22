@@ -97,7 +97,7 @@ It's important to keep all the files which have been already updated. These file
 @layer base {
   /* Other Codes */
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-skin-card-muted;
+    @apply bg-skin-muted;
   }
 
   /* Old code

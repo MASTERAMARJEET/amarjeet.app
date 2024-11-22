@@ -201,7 +201,7 @@ const nextPost =
 
     // Create the progress bar div
     const progressBar = document.createElement("div");
-    progressBar.className = "progress-bar h-1 w-0 bg-skin-accent";
+    progressBar.className = "progress-bar h-1 w-0 bg-skin-muted";
     progressBar.id = "myBar";
 
     // Append the progress bar to the progress container
@@ -266,7 +266,7 @@ const nextPost =
 
       const copyButton = document.createElement("button");
       copyButton.className =
-        "copy-code absolute right-3 -top-3 rounded bg-skin-card px-2 py-1 text-xs leading-4 text-skin-base font-medium";
+        "copy-code absolute right-3 -top-3 rounded bg-skin-surface px-2 py-1 text-xs leading-4 text-skin-base font-medium";
       copyButton.innerHTML = copyButtonLabel;
       codeBlock.setAttribute("tabindex", "0");
       codeBlock.appendChild(copyButton);
