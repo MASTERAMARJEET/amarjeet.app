@@ -1,14 +1,51 @@
-import cloudflare from '@astrojs/cloudflare';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
-import { defineConfig } from 'astro/config';
+import remarkToc from "remark-toc";
+import remarkCollapse from "remark-collapse";
+import cloudflare from "@astrojs/cloudflare";
+import mdx from "@astrojs/mdx";
+import react from "@astrojs/react";
+import sitemap from "@astrojs/sitemap";
+import tailwind from "@astrojs/tailwind";
+import { defineConfig } from "astro/config";
+import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
-  integrations: [mdx(), sitemap(), tailwind({ applyBaseStyles: false })],
-  output: 'server',
+  site: SITE.website,
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    react(),
+    sitemap(),
+    mdx(),
+    sitemap(),
+  ],
+  markdown: {
+    remarkPlugins: [
+      remarkToc,
+      [
+        remarkCollapse,
+        {
+          test: "Table of contents",
+        },
+      ],
+    ],
+    shikiConfig: {
+      // For more themes, visit https://shiki.style/themes
+      themes: { light: "min-light", dark: "night-owl" },
+      wrap: true,
+    },
+  },
+  vite: {
+    optimizeDeps: {
+      exclude: ["@resvg/resvg-js"],
+    },
+  },
+  scopedStyleStrategy: "where",
+  experimental: {
+    contentLayer: true,
+  },
+  output: "server",
   adapter: cloudflare({
     platformProxy: {
       enabled: true,
