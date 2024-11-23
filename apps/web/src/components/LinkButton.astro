@@ -4,8 +4,8 @@ export interface Props {
   target?: astroHTML.JSX.HTMLAttributeAnchorTarget;
   className?: string;
   ariaLabel?: string;
-  title?: string;
   disabled?: boolean;
+  active?: boolean;
 }
 
 const {
@@ -13,8 +13,8 @@ const {
   target,
   className = "",
   ariaLabel,
-  title,
   disabled = false,
+  active,
 } = Astro.props;
 ---
 
@@ -22,8 +22,9 @@ const {
   disabled ? (
     <span
       class:list={["group inline-block", className]}
-      title={title}
       aria-disabled={disabled}
+      data-disabled={disabled}
+      data-active={active}
     >
       <slot />
     </span>
@@ -33,7 +34,7 @@ const {
       {target}
       class:list={["group inline-block hover:text-skin-accent", className]}
       aria-label={ariaLabel}
-      title={title}
+      data-active={active}
     >
       <slot />
     </a>

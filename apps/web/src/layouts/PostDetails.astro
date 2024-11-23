@@ -76,8 +76,13 @@ const nextPost =
       </svg><span>Go back</span>
     </button>
   </div>
-  <main id="main-content">
-    <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
+  <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-12">
+    <h1
+      transition:name={slugifyStr(title)}
+      class="text-2xl font-semibold text-skin-accent"
+    >
+      {title}
+    </h1>
     <Datetime
       pubDatetime={pubDatetime}
       modDatetime={modDatetime}
@@ -134,10 +139,8 @@ const nextPost =
               stroke-linejoin="round"
               class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left flex-none"
             >
-              <>
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M15 6l-6 6l6 6" />
-              </>
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M15 6l-6 6l6 6" />
             </svg>
             <div>
               <span>Previous Post</span>
@@ -168,10 +171,8 @@ const nextPost =
               stroke-linejoin="round"
               class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right flex-none"
             >
-              <>
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 6l6 6l-6 6" />
-              </>
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 6l6 6l-6 6" />
             </svg>
           </a>
         )
@@ -180,15 +181,6 @@ const nextPost =
   </main>
   <Footer />
 </Layout>
-
-<style>
-  main {
-    @apply mx-auto w-full max-w-3xl px-4 pb-12;
-  }
-  .post-title {
-    @apply text-2xl font-semibold text-skin-accent;
-  }
-</style>
 
 <script is:inline data-astro-rerun>
   /** Create a progress indicator
