@@ -1,6 +1,7 @@
 ---
 export interface Props {
   href: string;
+  target?: astroHTML.JSX.HTMLAttributeAnchorTarget;
   className?: string;
   ariaLabel?: string;
   title?: string;
@@ -9,6 +10,7 @@ export interface Props {
 
 const {
   href,
+  target,
   className = "",
   ariaLabel,
   title,
@@ -28,6 +30,7 @@ const {
   ) : (
     <a
       {href}
+      {target}
       class:list={["group inline-block hover:text-skin-accent", className]}
       aria-label={ariaLabel}
       title={title}
