@@ -28,6 +28,6 @@
     "@cloudflare/workers-types": "4.20241022.0",
     "@tailwindcss/typography": "0.5.15",
     "daisyui": "4.12.13",
-    "wrangler": "3.84.0"
+    "wrangler": "3.90.0"
   }
 }
