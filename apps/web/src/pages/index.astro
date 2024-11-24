@@ -96,7 +96,7 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
     }
 
     {
-      posts.length && (
+      posts.length > 0 && (
         <div class="my-8 text-center">
           <LinkButton href="/posts/">
             All Posts
